@@ -44,7 +44,7 @@ const Footer = () => {
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </a>
-            <a href="#" className="w-10 h-10 border-2 border-black bg-background hover:bg-[#333333] transition-colors flex items-center justify-center mx-2">
+            <a href="https://github.com/mollygit001" className="w-10 h-10 border-2 border-black bg-background hover:bg-[#333333] transition-colors flex items-center justify-center mx-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
