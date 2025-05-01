@@ -5,14 +5,6 @@ import { motion } from 'framer-motion';
 const ExperienceSection = () => {
   const experiences = [
     {
-      id: 1,
-      title: "Frontend Developer Intern",
-      company: "EduCase",
-      period: "Dec 2024 - Feb 2025",
-      description: "As a Frontend Intern, I contributed to the development of enterprise web applications, collaborating with senior developers and providing guidance to junior team members. I also assisted in implementing CI/CD practices to streamline the development process and ensure efficient deployment",
-      technologies: ["React", "Node.js", "AWS", "Docker", "GraphQL"]
-    },
-    {
       id: 2,
       title: "SDE Intern",
       company: "Accenture",
