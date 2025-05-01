@@ -45,43 +45,51 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav 
+    <motion.nav
       className="fixed w-full py-4 px-6 z-50 bg-background border-b-4 border-primary"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <motion.div 
+        <motion.div
           className="font-display text-2xl text-primary"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          AZ
+          <img
+            src="/fav_icon.png"
+            alt="App Icon"
+            className="h-[50px] w-[50px] rounded-xl border-2 border-white shadow-lg hover:shadow-2xl transition-all duration-300 bg-white p-1"
+          />
         </motion.div>
-        
+
+
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button 
-            onClick={toggleMenu} 
+          <button
+            onClick={toggleMenu}
             className="brutal-btn !py-2 !px-4 bg-primary text-black"
           >
             Menu
           </button>
         </div>
-        
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-1">
           {navItems.map((item) => (
-            <a 
-              key={item.name} 
+            <a
+              key={item.name}
               href={item.href}
               className="brutal-btn !py-2 !px-4 bg-background text-foreground hover:bg-accent"
             >
               {item.name}
             </a>
           ))}
-          <a 
+          <a
             href="#resume"
             className="brutal-btn !py-2 !px-4 bg-primary text-black"
           >
@@ -89,10 +97,10 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <motion.div 
+        <motion.div
           className="md:hidden absolute top-full left-0 w-full bg-background border-b-4 border-black"
           initial="closed"
           animate="open"
@@ -111,7 +119,7 @@ const Navbar = () => {
                 {item.name}
               </motion.a>
             ))}
-            <motion.a 
+            <motion.a
               href="#resume"
               className="brutal-btn !py-2 !px-4 bg-primary text-black text-center"
               onClick={() => setIsMenuOpen(false)}
