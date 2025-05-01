@@ -113,7 +113,7 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <p>&copy; {new Date().getFullYear()} Arshad Zama. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} <b>Arshad Zama</b>, created with passion.</p>
         </motion.div>
       </div>
     </footer>
