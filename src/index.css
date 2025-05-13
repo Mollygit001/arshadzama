@@ -4,20 +4,39 @@
 
 @theme {
   /* Colors */
-  --color-background: #171717;
-  --color-foreground: #ffffff;
-  --color-muted: #404040;
-  --color-muted-foreground: #a3a3a3;
-  --color-primary: #ffd60a;
-  --color-primary-foreground: #000000;
-  --color-secondary: #4cc9f0;
-  --color-secondary-foreground: #000000;
-  --color-accent: #f72585;
-  --color-accent-foreground: #ffffff;
-  --color-border: #404040;
-  --color-ring: #ffd60a;
-  --color-destructive: #ff0000;
-  --color-destructive-foreground: #ffffff;
+  .light {
+    --color-background: #ffffff;
+    --color-foreground: #171717;
+    --color-muted: #f3f4f6;
+    --color-muted-foreground: #6b7280;
+    --color-primary: #ffd60a;
+    --color-primary-foreground: #000000;
+    --color-secondary: #4cc9f0;
+    --color-secondary-foreground: #000000;
+    --color-accent: #f72585;
+    --color-accent-foreground: #ffffff;
+    --color-border: #e5e7eb;
+    --color-ring: #ffd60a;
+    --color-destructive: #ff0000;
+    --color-destructive-foreground: #ffffff;
+  }
+
+  .dark {
+    --color-background: #171717;
+    --color-foreground: #ffffff;
+    --color-muted: #404040;
+    --color-muted-foreground: #a3a3a3;
+    --color-primary: #ffd60a;
+    --color-primary-foreground: #000000;
+    --color-secondary: #4cc9f0;
+    --color-secondary-foreground: #000000;
+    --color-accent: #f72585;
+    --color-accent-foreground: #ffffff;
+    --color-border: #404040;
+    --color-ring: #ffd60a;
+    --color-destructive: #ff0000;
+    --color-destructive-foreground: #ffffff;
+  }
 
   /* Box Shadows */
   --shadow-brutal: 4px 4px 0px 0px #000000;
