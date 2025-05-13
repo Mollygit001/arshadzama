@@ -1,10 +1,24 @@
 /* eslint-disable no-unused-vars */
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+    document.documentElement.classList.add(savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    document.documentElement.classList.remove(theme);
+    document.documentElement.classList.add(newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -67,9 +81,14 @@ const Navbar = () => {
           />
         </motion.div>
 
-
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-4">
+          <button
+            onClick={toggleTheme}
+            className="brutal-btn !py-2 !px-4 bg-background text-foreground"
+          >
+            {theme === 'dark' ? '🌞' : '🌙'}
+          </button>
           <button
             onClick={toggleMenu}
             className="brutal-btn !py-2 !px-4 bg-primary text-black"
@@ -79,7 +98,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-1">
+        <div className="hidden md:flex items-center space-x-1">
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -89,6 +108,12 @@ const Navbar = () => {
               {item.name}
             </a>
           ))}
+          <button
+            onClick={toggleTheme}
+            className="brutal-btn !py-2 !px-4 bg-background text-foreground"
+          >
+            {theme === 'dark' ? '🌞' : '🌙'}
+          </button>
           <a
             href="#resume"
             className="brutal-btn !py-2 !px-4 bg-primary text-black"
