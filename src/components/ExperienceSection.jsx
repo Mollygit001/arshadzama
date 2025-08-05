@@ -9,45 +9,69 @@ const ExperienceSection = () => {
       title: "SDE Intern",
       company: "Accenture",
       period: "Dec 2024 - Dec 2024",
-      description: "Completed a job simulation where I supported a client with a small development team, overwhelmed by the growth of their code base. I assisted in refactoring the code to improve performance and maintainability, while also implementing new features to enhance user experience.",
-      technologies: ["Java", "Springboot", "AWS",]
+      description:
+        "Completed a job simulation where I supported a client with a small development team, overwhelmed by the growth of their code base. I assisted in refactoring the code to improve performance and maintainability, while also implementing new features to enhance user experience.",
+      technologies: ["Java", "Springboot", "AWS"],
     },
     {
       id: 3,
       title: "Freelance Web Developer",
       company: "Self-employed",
       period: "2023 - present",
-      description: "Designed and developed custom websites for small businesses and personal clients.",
-      technologies: ["React","Angular", "PHP", "JavaScript", "MySQL", "mongoDB"]
-    }
+      description:
+        "Designed and developed custom websites for small businesses and personal clients.",
+      technologies: ["React", "Angular", "PHP", "JavaScript", "MySQL", "mongoDB"],
+    },
   ];
-  
-  // Animation variants
+
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
-      transition: { 
-        staggerChildren: 0.3
-      }
-    }
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
+
+  const SkeletonCard = () => (
+    <div className="timeline-item" role="presentation">
+      <div className="timeline-bullet"></div>
+      <div className="brutal-card bg-muted p-6 animate-pulse">
+        <div className="mb-4 space-y-2">
+          <div className="w-32 h-5 bg-gray-400 rounded"></div>
+          <div className="w-48 h-6 bg-gray-400 rounded"></div>
+          <div className="w-36 h-5 bg-gray-300 rounded"></div>
+        </div>
+        <div className="space-y-2 mb-4">
+          <div className="h-4 bg-gray-300 rounded w-full"></div>
+          <div className="h-4 bg-gray-300 rounded w-5/6"></div>
+          <div className="h-4 bg-gray-300 rounded w-4/6"></div>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="w-16 h-5 bg-gray-400 rounded-full"></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <section id="experience" className="py-24 relative overflow-hidden">
       <div className="bg-grid" />
-      
+
       <div className="section-container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -57,8 +81,8 @@ const ExperienceSection = () => {
         >
           <h2 className="section-title">Experience</h2>
         </motion.div>
-        
-        <motion.div 
+
+        <motion.div
           className="ml-6 md:ml-12"
           variants={containerVariants}
           initial="hidden"
@@ -66,11 +90,7 @@ const ExperienceSection = () => {
           viewport={{ once: true, amount: 0.1 }}
         >
           {experiences.map((exp) => (
-            <motion.div 
-              key={exp.id} 
-              className="timeline-item"
-              variants={itemVariants}
-            >
+            <motion.div key={exp.id} className="timeline-item" variants={itemVariants}>
               <div className="timeline-bullet"></div>
               <div className="brutal-card bg-background p-6">
                 <div className="mb-4">
@@ -80,10 +100,10 @@ const ExperienceSection = () => {
                   <h3 className="text-2xl font-bold">{exp.title}</h3>
                   <h4 className="text-xl text-muted-foreground">{exp.company}</h4>
                 </div>
-                
+
                 <p className="mb-4">{exp.description}</p>
-                
-                <div className="flex flex-wrap">
+
+                <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech, index) => (
                     <span key={index} className="skill-tag bg-muted text-xs">
                       {tech}
@@ -92,6 +112,11 @@ const ExperienceSection = () => {
                 </div>
               </div>
             </motion.div>
+          ))}
+
+          {/* Add 3 Skeletons */}
+          {[...Array(3)].map((_, index) => (
+            <SkeletonCard key={`skeleton-${index}`} />
           ))}
         </motion.div>
       </div>
