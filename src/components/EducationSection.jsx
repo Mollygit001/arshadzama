@@ -10,7 +10,7 @@ const EducationSection = () => {
             degree: "Bachelor of Technology in Computer Science and Engineering",
             period: "Sep 2022 - Jul 2026",
             location: "Phagwara, Punjab",
-            cgpa: "6.95",
+            cgpa: "7.08",
             coursework: [
                 "DBMS",
                 "Operating System",
