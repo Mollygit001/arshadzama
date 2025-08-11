@@ -1,13 +1,20 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
-@import "tailwindcss";
-@tailwind utilities;
 
-:root {
-  /* Box Shadows */
-  --shadow-brutal: 4px 4px 0px 0px #000000;
-  --shadow-brutal-lg: 8px 8px 0px 0px #000000;
-  --shadow-brutal-xl: 12px 12px 0px 0px #000000;
-  --shadow-brutal-2xl: 16px 16px 0px 0px #000000;
+/* Import Tailwind */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme Config (Tailwind v4 way) */
+@theme {
+  /* Container */
+  --container-padding: 2rem;
+  --container-screens-2xl: 1400px;
+
+  /* Fonts */
+  --font-display: "Archivo Black", sans-serif;
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   /* Border Radius */
   --radius-lg: 0.5rem;
@@ -15,17 +22,13 @@
   --radius-sm: 0.25rem;
   --radius-none: 0;
 
-  /* Font Families */
-  --font-display: "Archivo Black", sans-serif;
-  --font-sans: Inter, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  /* Box Shadows */
+  --shadow-brutal: 4px 4px 0px 0px #000000;
+  --shadow-brutal-lg: 8px 8px 0px 0px #000000;
+  --shadow-brutal-xl: 12px 12px 0px 0px #000000;
+  --shadow-brutal-2xl: 16px 16px 0px 0px #000000;
 
-  /* Container Settings */
-  --container-padding: 2rem;
-  --container-2xl: 1400px;
-}
-
-.light {
+  /* Light Mode Colors */
   --color-background: #ffffff;
   --color-foreground: #171717;
   --color-muted: #f3f4f6;
@@ -40,50 +43,66 @@
   --color-ring: #ffd60a;
   --color-destructive: #ff0000;
   --color-destructive-foreground: #ffffff;
-}
 
-.dark {
-  --color-background: #171717;
-  --color-foreground: #ffffff;
-  --color-muted: #404040;
-  --color-muted-foreground: #a3a3a3;
-  --color-primary: #ffd60a;
-  --color-primary-foreground: #000000;
-  --color-secondary: #4cc9f0;
-  --color-secondary-foreground: #000000;
-  --color-accent: #f72585;
-  --color-accent-foreground: #ffffff;
-  --color-border: #404040;
-  --color-ring: #ffd60a;
-  --color-destructive: #ff0000;
-  --color-destructive-foreground: #ffffff;
-}
+  
 
-/* Optional utility & component layer for using these */
-@layer utilities {
-  .shadow-brutal {
-    box-shadow: var(--shadow-brutal);
+  /* Animations */
+  @keyframes accordion-down {
+    from { height: 0 }
+    to { height: var(--radix-accordion-content-height) }
   }
-  .shadow-brutal-lg {
-    box-shadow: var(--shadow-brutal-lg);
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height) }
+    to { height: 0 }
   }
-  .rounded-lg {
-    border-radius: var(--radius-lg);
+  @keyframes slide-up {
+    0% { transform: translateY(25px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
   }
-  .font-display {
-    font-family: var(--font-display);
+  @keyframes slide-down {
+    0% { transform: translateY(-25px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
   }
-  .bg-primary {
-    background-color: var(--color-primary);
+  @keyframes fade-in {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
   }
-  .text-muted-foreground {
-    color: var(--color-muted-foreground);
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-10px) }
   }
-}
+  @keyframes float {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-8px) }
+  }
+  @keyframes spin-slow {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+  }
 
+  /* Animation Tokens */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-slide-up: slide-up 0.4s ease-out;
+  --animate-slide-down: slide-down 0.4s ease-out;
+  --animate-fade-in: fade-in 0.4s ease-out;
+  --animate-bounce: bounce 2s ease-in-out infinite;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-spin-slow: spin-slow 8s linear infinite;
+}
+/* Dark Mode Colors */
+  .dark {
+    --color-background: #171717;
+    --color-foreground: #ffffff;
+    --color-muted: #404040;
+    --color-muted-foreground: #a3a3a3;
+    --color-border: #404040;
+  }
+
+/* Base Layer */
 @layer base {
   * {
-    @apply border-border; 
+    @apply border-border;
   }
 
   html {
@@ -98,29 +117,19 @@
     @apply font-display tracking-tight;
   }
 
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
-  }
-
-  h2 {
-    @apply text-3xl md:text-4xl font-bold;
-  }
-
-  h3 {
-    @apply text-2xl md:text-3xl font-bold;
-  }
-
-  h4 {
-    @apply text-xl md:text-2xl font-bold;
-  }
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl font-bold; }
+  h2 { @apply text-3xl md:text-4xl font-bold; }
+  h3 { @apply text-2xl md:text-3xl font-bold; }
+  h4 { @apply text-xl md:text-2xl font-bold; }
 
   code, pre {
     @apply font-mono;
   }
 }
 
+/* Components Layer */
 @layer components {
-  /* Neobrutalism UI Components */
+  /* Neobrutalism Components */
   .brutal-btn {
     @apply relative font-bold py-3 px-6 border-4 border-black shadow-brutal 
            hover:-translate-y-1 active:translate-y-0 active:shadow-none 
@@ -152,69 +161,32 @@
     @apply absolute -left-3 top-0 w-6 h-6 bg-accent border-4 border-border;
   }
 
-  /* Skill Tag */
   .skill-tag {
     @apply inline-block bg-white text-black border-2 border-border px-3 py-2 m-1 font-bold shadow-brutal;
   }
 
-  /* Contact Icon */
   .contact-icon {
     @apply w-10 h-10 bg-primary text-primary-foreground p-2 border-2 border-border;
   }
 
-  /* Background Grid */
   .bg-grid {
     @apply absolute inset-0 z-0;
     background-size: 50px 50px;
     background-image: linear-gradient(to right, #d1d5db 1px, transparent 1px),
-                     linear-gradient(to bottom, #d1d5db 1px, transparent 1px);
+                      linear-gradient(to bottom, #d1d5db 1px, transparent 1px);
     opacity: 0.2;
   }
 }
 
+/* Utilities Layer */
 @layer utilities {
   .clip-path-slant {
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
   }
-  
   .clip-path-slant-reverse {
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
   }
-  
   .card-hover {
     @apply hover:-translate-y-2 transition-all duration-300;
   }
-}
-
-@keyframes accordion-down {
-  from { height: 0 }
-  to { height: var(--radix-accordion-content-height) }
-}
-@keyframes accordion-up {
-  from { height: var(--radix-accordion-content-height) }
-  to { height: 0 }
-}
-@keyframes slide-up {
-  0% { transform: translateY(25px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-@keyframes slide-down {
-  0% { transform: translateY(-25px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-@keyframes fade-in {
-  0% { opacity: 0 }
-  100% { opacity: 1 }
-}
-@keyframes bounce {
-  0%, 100% { transform: translateY(0) }
-  50% { transform: translateY(-10px) }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0) }
-  50% { transform: translateY(-8px) }
-}
-@keyframes spin-slow {
-  0% { transform: rotate(0deg) }
-  100% { transform: rotate(360deg) }
 }
