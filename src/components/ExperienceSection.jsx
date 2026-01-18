@@ -6,21 +6,12 @@ const ExperienceSection = () => {
   const experiences = [
     {
       id: 2,
-      title: "SDE Intern",
-      company: "Accenture",
-      period: "Dec 2024 - Dec 2024",
+      title: "Open Source Developer",
+      company: "GirlScript Foundation",
+      period: "July 2025 - Oct 2025",
       description:
-        "Completed a job simulation where I supported a client with a small development team, overwhelmed by the growth of their code base. I assisted in refactoring the code to improve performance and maintainability, while also implementing new features to enhance user experience.",
-      technologies: ["Java", "Springboot", "AWS"],
-    },
-    {
-      id: 3,
-      title: "Freelance Web Developer",
-      company: "Self-employed",
-      period: "2023 - present",
-      description:
-        "Designed and developed custom websites for small businesses and personal clients.",
-      technologies: ["React", "Angular", "PHP", "JavaScript", "MySQL", "mongoDB"],
+        "Actively participated in community discussions and code reviews, collaborating with project maintainers and fellow contributors to follow the best coding practices, resulting in successful PR mergers and impactful contributions to 5+ repositories",
+      technologies: ["JavaScript", "Reactjs", "CI/CD", "Git", "GitHub"],
     },
   ];
 

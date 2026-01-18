@@ -6,23 +6,23 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["JavaScript", "Python", "Java", "C++", "TypeScript", "Go", "Rust"]
+      skills: ["JavaScript", "Python", "C++", "TypeScript", "Rust"]
     },
     {
       title: "Frontend",
-      skills: ["React", "Angular", "Vue.js", "HTML5", "CSS3", "SASS", "Tailwind CSS", "Redux"]
+      skills: ["React", "HTML5", "CSS3", "SASS", "Tailwind CSS", "Redux"]
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Express", "Django", "Flask", "Spring Boot", "RESTful APIs", "GraphQL"]
+      skills: ["Node.js", "Express", "Django", "Flask", "RESTful APIs", "GraphQL"]
     },
     {
       title: "Databases",
-      skills: ["MongoDB", "PostgreSQL", "MySQL", "SQLite", "Redis", "Firebase"]
+      skills: ["MongoDB", "PostgreSQL", "MySQL", "SQLite", "Redis"]
     },
     {
       title: "Distributed Systems",
-      skills: ["Microservices", "gRPC", "Apache Kafka", "RabbitMQ", "Redis", "Load Balancing", "Service Mesh", "Consul"]
+      skills: ["Microservices", "gRPC", "Redis", "Load Balancing"]
 
     },
     {
