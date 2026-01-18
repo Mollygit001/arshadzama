@@ -6,56 +6,78 @@ const CertificationsSection = () => {
   const [selectedCert, setSelectedCert] = useState(null);
 
   const certifications = [
-    {
-      id: 1,
-      title: "Approximation Algorithms and Linear Programming",
-      provider: "University of Colorado Boulder",
-      year: 2024,
-      certificateUrl: "/certificates/approximation-algorithms.pdf"
-    },
-    {
-      id: 2,
-      title: "Dynamic Programming, Greedy Algorithms",
-      provider: "University of Colorado Boulder",
-      year: 2024,
-      certificateUrl: "/certificates/dynamic-programming.pdf"
-    },
-    {
-      id: 3,
-      title: "ChatGPT Advanced Data Analysis",
-      provider: "Vanderbilt University",
-      year: 2024,
-      certificateUrl: "/certificates/chatgpt-advanced.pdf"
-    },
-    {
-      id: 4,
-      title: "Introduction to Web Design and Development",
-      provider: "Linkedin Learning",
-      year: 2023,
-      certificateUrl: "/certificates/web-design.pdf"
-    },
-    {
-      id: 5,
-      title: "Investment Risk Management",
-      provider: "Coursera Project Network",
-      year: 2023,
-      certificateUrl: "/certificates/investment-risk.pdf"
-    },
-    {
-      id: 6,
-      title: "Server side JavaScript with Node.js",
-      provider: "NIIT (offered through Coursera)",
-      year: 2022,
-      certificateUrl: "/certificates/nodejs.pdf"
-    },
-    {
-      id: 7,
-      title: "Programming Fundamentals",
-      provider: "Duke University",
-      year: 2022,
-      certificateUrl: "/certificates/programming-fundamentals.pdf"
-    },
-  ];
+  {
+    id: 1,
+    title: "Agile Project Management",
+    provider: "University of Colorado Boulder",
+    year: 2025,
+    certificateUrl: "/certificates/Agile-PM.pdf"
+  },
+  {
+    id: 2,
+    title: "Project Planning and Execution",
+    provider: "University of Colorado Boulder",
+    year: 2025,
+    certificateUrl: "/certificates/Project_Planning.pdf"
+  },
+  {
+    id: 3,
+    title: "Project Management: Foundations and Initiation",
+    provider: "University of Colorado Boulder",
+    year: 2025,
+    certificateUrl: "/certificates/PM_Initiation.pdf"
+  },
+  {
+    id: 4,
+    title: "Approximation Algorithms and Linear Programming",
+    provider: "University of Colorado Boulder",
+    year: 2024,
+    certificateUrl: "/certificates/approximation-algorithms.pdf"
+  },
+  {
+    id: 5,
+    title: "Dynamic Programming, Greedy Algorithms",
+    provider: "University of Colorado Boulder",
+    year: 2024,
+    certificateUrl: "/certificates/dynamic-programming.pdf"
+  },
+  {
+    id: 6,
+    title: "ChatGPT Advanced Data Analysis",
+    provider: "Vanderbilt University",
+    year: 2024,
+    certificateUrl: "/certificates/chatgpt-advanced.pdf"
+  },
+  {
+    id: 7,
+    title: "Introduction to Web Design and Development",
+    provider: "Linkedin Learning",
+    year: 2023,
+    certificateUrl: "/certificates/web-design.pdf"
+  },
+  {
+    id: 8,
+    title: "Investment Risk Management",
+    provider: "Coursera Project Network",
+    year: 2023,
+    certificateUrl: "/certificates/investment-risk.pdf"
+  },
+  {
+    id: 9,
+    title: "Server side JavaScript with Node.js",
+    provider: "NIIT (offered through Coursera)",
+    year: 2022,
+    certificateUrl: "/certificates/nodejs.pdf"
+  },
+  {
+    id: 10,
+    title: "Programming Fundamentals",
+    provider: "Duke University",
+    year: 2022,
+    certificateUrl: "/certificates/programming-fundamentals.pdf"
+  },
+];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
