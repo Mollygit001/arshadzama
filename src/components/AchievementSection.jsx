@@ -6,24 +6,19 @@ const AchievementsSection = () => {
   const achievements = [
     {
       id: 1,
-      title: "Gold Meddalist - Regional Mathematics Olympiad",
-      description: "Achieved first place in a competitive mathematics olympiad, showcasing problem-solving skills."
+      title: "GSSOC'25 - Campus Ambassador",
+      description: "Spearheaded GSSoC promotional campaigns, driving awareness through seminars,social media outreach, and peer mentoring, leading to a 30% increase in student participation compared to the previous year."
     },
     {
       id: 2,
-      title: "Top Contributor(Hacktoberfest) - Open Source",
-      description: "Recognized as a top contributor to a popular open-source frontend library."
+      title: "Contributor (Hacktoberfest) - Open Source",
+      description: "Recognized as a contributor to a popular open-source frontend library."
     },
     {
       id: 3,
       title: "Google solution challenge 2025",
       description: "Participated in a global competition to develop innovative solutions using Google technologies."
     },
-    {
-      id: 4,
-      title: "Featured Developer - Unreal Engine Spotlight",
-      description: "Showcased a unique project in a developer spotlight series by Unreal Engine."
-    }
   ];
   
   // Animation variants
