@@ -8,69 +8,97 @@ const CertificationsSection = () => {
   const certifications = [
   {
     id: 1,
+    title: "Foundations of User Experience (UX) Design",
+    provider: "Google (offered through Coursera)",
+    year: 2026,
+    certificateUrl: "/certificates/FoundationsUX.pdf"
+  },
+  {
+    id: 2,
+    title: "Start the UX Design Process: Empathize, Define, and Ideate",
+    provider: "Google",
+    year: 2026,
+    certificateUrl: "/certificates/Design-ProcessUX.pdf"
+  },
+  {
+    id: 3,
+    title: "Build Wireframes and Low-Fidelity Prototypes",
+    provider: "Google",
+    year: 2026,
+    certificateUrl: "/certificates/WireframesUX.pdf"
+  },
+  {
+    id: 4,
+    title: "Conduct UX Research and Test Early Concepts",
+    provider: "Google",
+    year: 2026,
+    certificateUrl: "/certificates/ResearchUX.pdf"
+  },
+  {
+    id: 5,
     title: "Agile Project Management",
     provider: "University of Colorado Boulder",
     year: 2025,
     certificateUrl: "/certificates/Agile-PM.pdf"
   },
   {
-    id: 2,
+    id: 6,
     title: "Project Planning and Execution",
     provider: "University of Colorado Boulder",
     year: 2025,
     certificateUrl: "/certificates/Project_Planning.pdf"
   },
   {
-    id: 3,
+    id: 7,
     title: "Project Management: Foundations and Initiation",
     provider: "University of Colorado Boulder",
     year: 2025,
     certificateUrl: "/certificates/PM_Initiation.pdf"
   },
   {
-    id: 4,
+    id: 8,
     title: "Approximation Algorithms and Linear Programming",
     provider: "University of Colorado Boulder",
     year: 2024,
     certificateUrl: "/certificates/approximation-algorithms.pdf"
   },
   {
-    id: 5,
+    id: 9,
     title: "Dynamic Programming, Greedy Algorithms",
     provider: "University of Colorado Boulder",
     year: 2024,
     certificateUrl: "/certificates/dynamic-programming.pdf"
   },
   {
-    id: 6,
+    id: 10,
     title: "ChatGPT Advanced Data Analysis",
     provider: "Vanderbilt University",
     year: 2024,
     certificateUrl: "/certificates/chatgpt-advanced.pdf"
   },
   {
-    id: 7,
+    id: 11,
     title: "Introduction to Web Design and Development",
     provider: "Linkedin Learning",
     year: 2023,
     certificateUrl: "/certificates/web-design.pdf"
   },
   {
-    id: 8,
+    id: 12,
     title: "Investment Risk Management",
     provider: "Coursera Project Network",
     year: 2023,
     certificateUrl: "/certificates/investment-risk.pdf"
   },
   {
-    id: 9,
+    id: 13,
     title: "Server side JavaScript with Node.js",
     provider: "NIIT (offered through Coursera)",
     year: 2022,
     certificateUrl: "/certificates/nodejs.pdf"
   },
   {
-    id: 10,
+    id: 14,
     title: "Programming Fundamentals",
     provider: "Duke University",
     year: 2022,

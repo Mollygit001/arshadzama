@@ -7,12 +7,12 @@ const AchievementsSection = () => {
     {
       id: 1,
       title: "GSSOC'25 - Campus Ambassador",
-      description: "Spearheaded GSSoC promotional campaigns, driving awareness through seminars,social media outreach, and peer mentoring, leading to a 30% increase in student participation compared to the previous year."
+      description: "Spearheaded GSSoC promotional campaigns, driving awareness through seminars,social media outreach, and peer mentoring, leading to significant increase in student participation compared to the previous year."
     },
     {
       id: 2,
       title: "Contributor (Hacktoberfest) - Open Source",
-      description: "Recognized as a contributor to a popular open-source frontend library."
+      description: "Recognized as a open source contributor."
     },
     {
       id: 3,
