@@ -175,7 +175,7 @@ const ContactSection = () => {
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <a 
-                  href="https://drive.google.com/file/d/1Cmwuvwjnf3AfJG-8Yproc-SUwZ8ok54z/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1rf3XdGqhIDIVl9b73Ce1ZSHHPFckyajp/view?usp=sharing"
                   target="_blank"
                   className="brutal-btn bg-primary text-black inline-flex items-center"
                   id="resume"
