@@ -22,7 +22,7 @@ const ProjectsSection = () => {
         "Concurrency",
         "HTTP",
       ],
-      githubUrl: "https://github.com/Mollygit001/blitz_load",
+      githubUrl: "https://github.com/arshadzamax/blitz_load",
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const ProjectsSection = () => {
       longDescription:
         "Affiliate++ is a full-stack MERN application that enables users to manage, add, and update affiliate links through a secure dashboard. The system implements JWT-based authentication with role-based access control (Admin/User), ensuring secure session handling. Razorpay payment integration allows users to initiate and track transactions with real-time callbacks, reducing payment failures by 20%.",
       tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Razorpay API"],
-      githubUrl: "https://github.com/Mollygit001/Summer-MERN",
+      githubUrl: "https://github.com/arshadzamax/affiliate",
     },
     {
       id: 3,
@@ -52,7 +52,7 @@ const ProjectsSection = () => {
         "Web3",
         "Ethereum",
       ],
-      githubUrl: "https://github.com/mollygit001/chainFund",
+      githubUrl: "https://github.com/arshadzamax/chainFund",
       liveUrl: "https://defundchain.vercel.app",
     },
     {
@@ -70,7 +70,7 @@ const ProjectsSection = () => {
         "React Router",
         "Context API",
       ],
-      githubUrl: "https://github.com/Mollygit001/SpiceHaven",
+      githubUrl: "https://github.com/arshadzamax/SpiceHaven",
       liveUrl: "https://spice-haven.vercel.app/",
     },
     {
@@ -82,7 +82,7 @@ const ProjectsSection = () => {
       longDescription:
         "W2B PDF is a React-based web application that allows users to upload PDF files and automatically convert them into a dark-mode optimized view by inverting background and text colors. Built using PDF.js, the project improves readability during prolonged reading sessions and reduces eye strain, especially in low-light environments.",
       tech: ["React", "JavaScript", "PDF.js", "HTML5", "CSS3"],
-      githubUrl: "https://github.com/Mollygit001/w2bpdfs",
+      githubUrl: "https://github.com/arshadzamax/w2bpdfs",
       liveUrl: "https://w2bpdfs.vercel.app/",
     },
     

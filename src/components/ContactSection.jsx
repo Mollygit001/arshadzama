@@ -71,7 +71,7 @@ const ContactSection = () => {
     {
       id: 4,
       type: "GitHub",
-      value: "github.com/mollygit001",
+      value: "github.com/arshadzamax",
       icon: (
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
